@@ -1,0 +1,101 @@
+site_name: Zettlr Docs
+site_url: https://docs.zettlr.com/zh-cn
+repo_url: https://github.com/Zettlr/zettlr-docs
+site_description: >-
+    本文档包含了充分利用Markdown编辑器Zettlr所需知道的所有信息。
+site_author: Hendrik Erz
+copyright: "&copy; 2017-2020 by Zettlr"
+docs_dir: ../docs/zh-cn
+site_dir: ../build/zh-cn
+edit_uri: edit/master/docs/zh-cn
+extra_css:
+  - assets/app.css
+nav:
+  - 欢迎: index.md
+  - 开始:
+    - 安装: getting-started/setup.md
+    - 迁移至新电脑: getting-started/migrating.md
+    - 安装LaTeX: getting-started/installing-latex.md
+    - 安全注意事项: getting-started/a-note-on-security.md
+    - 参与本项目: getting-started/get-involved.md
+    - 故障排查: getting-started/troubleshooting.md
+  - 入门使用:
+    - 用户界面: core/user-interface.md
+    - 导入文件: core/import.md
+  - 基础用法:
+    - 工作区和文件夹: core/workspaces.md
+    - 文件: core/files.md
+    - 文件管理器: core/file-manager.md
+    - 拆分视图: core/split-view.md
+    - 侧边栏: core/sidebar.md
+    - 编写Markdown: core/writing-markdown.md
+    - 样式和语法: core/style-and-grammar.md
+    - 可读性: core/readability.md
+    - 状态栏: core/statusbar.md
+    - 自动更正和魔术引号: core/autocorrect.md
+    - 引文: core/citations.md
+    - 数学: core/math.md
+    - 代码块: core/snippets.md
+    - 查询: core/search.md
+    - 编辑表格: core/tables.md
+    - 打印和预览: core/print-preview.md
+    - 导出: core/export.md
+  - 高级用法:
+    - YAML前置格式: advanced/yaml-frontmatter.md
+    - 素材管理器: advanced/assets-manager.md
+    - 默认文件: advanced/defaults-files.md
+    - 自定义模板: advanced/custom-templates.md
+    - 自定CSS: advanced/custom-css.md
+    - 项目: advanced/projects.md
+    - 番茄计时器: advanced/pomodoro.md
+    - 卡片盒笔记法: advanced/zkn-method.md
+    - 图形视图: advanced/graph.md
+  - 指南:
+    - 本地语言工具: guides/languagetool-local.md
+    - 演示文稿: guides/presentations.md
+    - 提交到期刊时用LaTeX模板: guides/journal-latex-template.md
+    - 移动端设备: guides/portable.md
+  - References:
+    - 常见问题: reference/faq.md
+    - 快捷键: reference/keyboard-shortcuts.md
+    - Markdown基础: reference/markdown-basics.md
+    - 设置: reference/settings.md
+    - 拼写检查: reference/spell-checking.md
+theme:
+  name: readthedocs
+  locale: zh-cn
+  custom_dir: ../theme_override
+  highlightjs: True
+  prev_next_buttons_location: both
+  hljs_languages:
+    - javascript
+    - css
+    - yaml
+    - latex
+markdown_extensions:
+    - def_list
+    - admonition
+    - toc:
+        permalink: True
+plugins:
+  - search:
+      lang: zh-cn
+
+以下需要把中文单引号’替换成英文单引号'，并去掉单引号前的空格：
+- 16页CA001题干第1行[XMAINR] ’s：
+- 16页CA006题干第1行[XChildPanAliveName[i]] ’s
+- 16页CA007题干第1行[XChildPanAliveName[i]] ’s
+- 17页CA009题干第1行[XChildAliveName[i]] ’s
+- 17页CA010题干第1行[XChildPanAliveName[i]] ’s
+- 17页CA012题干第1行[XChildCoupleDis[i]] ’s
+- 18页CA013题干第1行，[XChildPanAliveName[i]] 's
+
+以下需要去掉单引号前的空格：
+- 18页CA014题上方【INTRO】第1行[XFamilyR] 's
+
+以下需要把中文单引号’替换成英文单引号'
+- 17页CA007题选项10.Master‘s degree 和 选项997.Don’t know
+- 17页CA008题选项997.Don’t know
+- 17页CA010题选项997.Don’t know
+- 18页CA012题选项997.Don’t know
+- 18页CA013题选项997.Don’t know
