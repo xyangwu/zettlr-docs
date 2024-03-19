@@ -69,7 +69,7 @@ Most LaTeX features come in the form of packages. By default, minimal installati
 
 We recommend you don't install packages unless Zettlr complains during exports. If you are missing some package, Zettlr will give you one of two errors: either `Command \somecommand not defined` or `File somefile.sty not found`.
 
-In both cases it is likely that the command or file will be provided by a package. It's easy to install the missing packages using the following procedure.
+In both cases, it is likely that the command or file will be provided by a package. It's easy to install the missing packages using the following procedure.
 
 !!! note
 
