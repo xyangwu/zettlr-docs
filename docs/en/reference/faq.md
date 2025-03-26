@@ -10,7 +10,7 @@ In many companies the IT department puts restrictions in place so that you canno
 
 ## macOS asks me whether I want to install "XCode Commandline tools" when I start Zettlr
 
-Zettlr offers some basic `git` functionality, and for that must check whether `git` is installed on the computer. While on Windows and Linux, this is a simple check during startup, macOS will notice that Zettlr is interested in the command and, if `git` is not yet installed, offer the installation of the "XCode commandline tools" that, among other things, includes `git`. There is no way for us to reliably suppress this message, so you'll either need to decline everytime you open Zettlr, or simply install the command line tools. Installing the commandline tools is a safe procedure and you won't notice that they are installed. They could potentially even bring benefits. See [this Apple discussion thread on what the commandline tools are](https://developer.apple.com/forums/thread/13781). See also the [related issue on GitHub](https://github.com/Zettlr/Zettlr/issues/4709).
+Zettlr integrates with Git by detecting repositories on your system and displaying relevant information within directory properties. Upon startup, Zettlr confirms the installation of `git` on Windows and Linux systems through a straightforward check. On macOS, if `git` is absent, the system prompts the installation of "XCode commandline tools," which includes `git`. Unfortunately, this prompt cannot be reliably suppressed. Users must either repeatedly decline the prompt upon opening Zettlr or opt to install the command line tools. The installation of these tools is secure and unobtrusive, offering additional benefits. For more details on the command line tools, refer to [this Apple discussion thread](https://developer.apple.com/forums/thread/13781). Further information can be found in the [related GitHub issue](https://github.com/Zettlr/Zettlr/issues/4709).
 
 ## I removed the tutorial folder from my computer, and now I cannot get it back!
 
@@ -46,18 +46,6 @@ Zettlr cannot account for all of these variables. Therefore, here are a few tips
 ## If I don't want to use Zettlr anymore, what would I need to do to switch programs?
 
 Simply uninstall Zettlr and begin using another program of your choice. Zettlr does not mess with your files. If you have been using Projects or modified the directories, there will be small files named `.ztr-directory` present in some folders. To remove them, simply reset the sorting of directories to default, and remove all projects prior to uninstalling the app (or manually remove these files afterwards).
-
-## I'm using Linux and deleting files doesn't move them to the trash!
-
-Zettlr never completely removes your files. It always only moves them to the trash so in case you accidentally remove a file you need, you can always restore it. On macOS and Windows systems, the trash is activated by default, but on some Linux distributions, you need to activate the trash functionality manually. On Linux, Zettlr (to be more precise: the underlying Electron framework) makes use of the binary `gvfs-trash` to move files to the trash. To make use of this functionality, please make sure you have `gvfs-trash` installed! On Debian/Ubuntu you can do so by running the following code in a terminal:
-
-```bash
-$ sudo apt install gvfs-bin
-```
-
-!!! note
-
-    If you do not want to use the trash functionality, you can also enable the setting in the advanced preferences telling Zettlr to terminally remove a file if moving it to the trash fails. Please note that this will remove files irreversibly!
 
 ## What is the correct URI formatting for Markdown links?
 
